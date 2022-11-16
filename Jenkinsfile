@@ -33,7 +33,7 @@ pipeline {
 				sh'mvn clean deploy -Dmaven.test.skip=true -Dresume=false'
 			      }
 		 }
-		 stage('Docker Build and Push') {
+		/* stage('Docker Build and Push') {
                        steps {
                                withDockerRegistry([credentialsId: "docker-hub", url: ""]) {
          			  sh 'printenv'
@@ -42,7 +42,7 @@ pipeline {
          			  sh 'docker push youssefbannour3241/spring:latest'
          			}
      			  }
-    		}
+    		}*/
 		stage('Docker compose') {
       		      steps {
          parallel(
