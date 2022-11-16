@@ -5,7 +5,7 @@ pipeline {
 
 	stages {
 		
-		stage('Junit + Mockito Test') {
+		stage('Junit') {
 			steps {
 				sh 'mvn test'
 			      } 
