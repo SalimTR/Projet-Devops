@@ -24,7 +24,7 @@ services:
     build:
       context: .
     container_name: ci-spring
-    image: 
+    image: docker.io/youssefbannour3241/spring
     ports:
       - "8089:8089"
     networks:
