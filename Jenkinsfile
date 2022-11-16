@@ -43,7 +43,7 @@ pipeline {
          			}
      			  }
     		}
-		/* stage('Docker compose') {
+		 stage('Docker compose') {
       		      steps {
          parallel(
            "Docker compose": {
@@ -51,7 +51,7 @@ pipeline {
            },
            "Delete running containers": {
 		       sh 'sleep 2m '
-               sh 'docker rm -f ci-spring ci-db ci-angular '
+               sh 'docker rm -f ci-spring '
            }
          )
        }
@@ -65,6 +65,6 @@ pipeline {
 			       failure {
 				       echo "failed"
 				
-		                }*/
+		                }
 		}
 }
