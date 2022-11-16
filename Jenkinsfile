@@ -17,9 +17,9 @@ pipeline {
 			      }
 		}
 		       
-		/*stage('SonarQube + JacOcO Analysis') {
+		stage('SonarQube + JacOcO Analysis') {
 			steps {
-				sh "mvn  sonar:sonar -Dsonar.projectKey=projet-ci  -Dsonar.host.url=http://192.168.33.10:9000  -Dsonar.login=faf5060f1fdac026b36edab0e340e8261b1a07cf"
+				sh "mvn  sonar:sonar -Dsonar.projectKey=devops  -Dsonar.host.url=http://192.168.1.7:9000  -Dsonar.login=dcf831d38a49691a19de76fd27d7c7ecab10083c"
 			}
 		        post {
 				always {
@@ -32,7 +32,7 @@ pipeline {
 				//sh 'mvn clean deploy -DskipTests'
 				sh'mvn clean deploy -Dmaven.test.skip=true -Dresume=false'
 			      }
-		 } */
+		 }
 		/*  stage('Docker Build and Push') {
                        steps {
                                withDockerRegistry([credentialsId: "docker-hub", url: ""]) {
